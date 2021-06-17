@@ -1,0 +1,19 @@
+<!-- <mat-toolbar color="primary" class="mat-elevation-z8">
+  <span>İşlem Onayı</span>
+</mat-toolbar> -->
+<div class="container">
+  <form [formGroup]="frm">
+    <jodit-editor
+      [config]="Jconfig"
+      formControlName="icerik"
+      required
+    ></jodit-editor>
+  </form>
+</div>
+<p>&nbsp;</p>
+<button mat-raised-button color="primary" (click)="dialogRef.close(frm.value)">
+  Onayla</button
+>&nbsp;
+<button mat-raised-button color="warn" (click)="dialogRef.close(false)">
+  İptal
+</button>

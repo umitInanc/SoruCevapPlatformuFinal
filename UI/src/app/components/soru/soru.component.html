@@ -1,0 +1,14 @@
+<div>
+  <mat-card class="example-card">
+    <mat-card-title style="color: crimson"> {{ soru.baslik }} </mat-card-title>
+
+    <mat-card-content>
+      <div [innerHTML]="soru.icerik"></div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button *ngIf="Auth()" mat-button (click)="cevapla()">Cevapla</button>
+      <button mat-button (click)="detayaGit(soru.Id)">Detay</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

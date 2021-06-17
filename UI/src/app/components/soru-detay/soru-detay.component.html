@@ -1,0 +1,15 @@
+<mat-grid-list cols="1" gutterSize="500px">
+  <mat-card>
+    <mat-card-title>{{ soru?.uye?.ad }} {{ soru?.uye?.soyad }}</mat-card-title>
+    <mat-card-title
+      ><h2>{{ soru.baslik }}</h2></mat-card-title
+    >
+    <mat-card-content><div [innerHtml]="soru.icerik"></div></mat-card-content>
+  </mat-card>
+
+  <h2>Cevaplar</h2>
+
+  <mat-card *ngFor="let cevap of soru?.cevaplar">
+    <mat-card-content><div [innerHtml]="cevap.icerik"></div></mat-card-content>
+  </mat-card>
+</mat-grid-list>
